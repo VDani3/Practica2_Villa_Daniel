@@ -61,9 +61,25 @@
         android:id="@+id/restartButton"
         android:layout_width="78dp"
         android:layout_height="56dp"
-        android:backgroundTint="#FFB117"
+        android:backgroundTint="#FF1717"
         app:icon="@drawable/refresh_icon"
         app:iconSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/laderboard"
+        android:layout_width="48dp"
+        android:layout_height="55dp"
+        android:backgroundTint="#FF9800"
+        android:paddingLeft="15px"
+        android:paddingRight="0px"
+        android:textAlignment="center"
+        app:icon="@android:drawable/ic_menu_myplaces"
+        app:iconPadding="0px"
+        app:iconSize="100px"
+        app:iconTint="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/restartButton"
+        app:layout_constraintStart_toEndOf="@+id/solutionButton"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
