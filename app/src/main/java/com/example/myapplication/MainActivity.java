@@ -74,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                     numField.setText("");
                     intents += 1;
+                    temps += 5;
                 }
 
             }
@@ -102,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
     private void mostrarAlerta() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Buen trabajo");
-        builder.setMessage("Has acertado el numero!");
+        builder.setMessage("Has acertado el numero! \nNombre:");
         // Set an EditText view to get user input
         final EditText input = new EditText(this);
 

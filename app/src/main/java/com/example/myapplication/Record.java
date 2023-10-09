@@ -10,4 +10,16 @@ public class Record {
         this.intents = i;
         this.temps = t;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getIntents() {
+        return intents;
+    }
+
+    public int getTemps() {
+        return temps;
+    }
 }
