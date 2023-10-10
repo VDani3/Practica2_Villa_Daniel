@@ -1,6 +1,6 @@
 package com.example.myapplication;
 
-public class Record {
+public class Record implements Comparable<Record>{
     private String name;
     private int intents;
     private int temps;
@@ -21,5 +21,10 @@ public class Record {
 
     public int getTemps() {
         return temps;
+    }
+
+    public int compareTo(Record otro) {
+        // Comparar por el campo 'intentos' en orden ascendente
+        return Integer.compare(this.intents, otro.intents);
     }
 }

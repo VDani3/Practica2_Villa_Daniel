@@ -12,8 +12,14 @@
         android:layout_height="48dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="4dp"
-        android:text="o"
+        android:backgroundTint="#BC4D4D"
+        android:paddingLeft="20dp"
+        android:textColorHighlight="#BA3737"
+        android:textColorLink="#E12B2B"
         app:cornerRadius="4dp"
+        app:icon="@android:drawable/ic_menu_close_clear_cancel"
+        app:iconPadding="0dp"
+        app:iconSize="25dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

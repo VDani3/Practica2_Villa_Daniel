@@ -7,16 +7,20 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
+import android.graphics.Typeface;
+
+import java.util.Collections;
 
 public class RecordsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
+        Collections.sort(ranking);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_records);
 
@@ -24,7 +28,7 @@ public class RecordsActivity extends AppCompatActivity {
         Intent changer = new Intent(getApplicationContext(), MainActivity.class);
 
         //Tabla
-        TableRow.LayoutParams params1 = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT);
+        TableRow.LayoutParams params1 = new TableRow.LayoutParams(400, ViewGroup.LayoutParams.MATCH_PARENT);
         TableRow.LayoutParams params2 = new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT);
         TableLayout tbl = (TableLayout) findViewById(R.id.tabla);
 
@@ -33,10 +37,17 @@ public class RecordsActivity extends AppCompatActivity {
         TextView c1 = new TextView(this);
         TextView c2 = new TextView(this);
         TextView c3 = new TextView(this);
+        //bold y mas grande
+        c1.setTypeface(null, Typeface.BOLD);
+        c1.setTextSize(17);
+        c2.setTypeface(null, Typeface.BOLD);
+        c2.setTextSize(17);
+        c3.setTypeface(null, Typeface.BOLD);
+        c3.setTextSize(17);
         //setting the text
-        c1.setText("Nombre");
-        c2.setText("Puntuacion");
-        c3.setText("Tiempo");
+        c1.setText("Nombre                          ");
+        c2.setText("Puntuacion    ");
+        c3.setText("Tiempo        ");
         c1.setLayoutParams(params1);
         c2.setLayoutParams(params1);
         c3.setLayoutParams(params1);

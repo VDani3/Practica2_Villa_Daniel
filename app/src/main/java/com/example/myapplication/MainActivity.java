@@ -112,6 +112,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 String name = String.valueOf(input.getText());
+                if (name.length() >= 20) {
+                    name = name.substring(0, 19);
+                }
                 ranking.add(new Record(name, intents, temps));
                 intents = 0;
                 temps = 0;
